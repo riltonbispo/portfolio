@@ -1,0 +1,61 @@
+/* ============= FONTS =============  */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Jost:wght@400;500;700&display=swap');
+
+
+/* ============= VARIAVEIS =============  */ 
+:root{
+  
+  /* CORES */
+  --primary-color: hsl(165,60%,40%);
+  --title-color: hsl(0,0%,100%);
+  --text-color: hsl(0,0%,92%);
+  --text-color: hsl(216,18%,16%);
+  --bg-color-alt: hsl(213,10%,21%);
+  --container-color: hsl(217,18%,14%);
+  --border-color: hsl(210,2%,65%);
+  --firts-gradient: linear-gradient(
+    0deg, 
+    var(--bg-color-alt) 0%, 
+    var(--bg-color) 100%
+  );
+  --second-gradient: linear-gradient(
+    180deg, 
+    var(--bg-color-alt) 0%, 
+    var(--bg-color) 100%
+  );
+  --third-gradient: linear-gradient(
+    180deg, 
+    var(--bg-color) 0%, 
+    var(--bg-color) 100%
+  );
+
+  /* TIPOGRAFIA */
+
+  --body-font: 'Jost', sans-serif;
+  --second-font:'Caveat', cursive;
+
+  --biggest-font-size: 90px;
+  --h1-font-size: 44px;
+  --h2-font-size: 30px;
+  --h3-font-size: 28px;
+  --h4-font-size: 24px;
+  --h5-font-size: 22px;
+  --largest-font-size: 21px;
+  --larger-font-size: 20px;
+  --large-font-size: 18px;
+  --normal-font-size: 16px;
+  --small-font-size: 15px;
+  --smaller-font-size: 14px;
+  --tiny-font-size: 13px;
+
+  /* SOMBRAS */
+
+  --shadow: 5px 5px rgb(255 255 255 / 10%);
+
+  /* TRANSIÇÕES */
+
+  --transition: cubic-bezier(0.3,0,0.3,1);
+  
+
+}
