@@ -10,7 +10,7 @@
   --primary-color: hsl(165,60%,40%);
   --title-color: hsl(0,0%,100%);
   --text-color: hsl(0,0%,92%);
-  --text-color: hsl(216,18%,16%);
+  --bg-color: hsl(216,18%,16%);
   --bg-color-alt: hsl(213,10%,21%);
   --container-color: hsl(217,18%,14%);
   --border-color: hsl(210,2%,65%);
@@ -56,6 +56,54 @@
   /* TRANSIÇÕES */
 
   --transition: cubic-bezier(0.3,0,0.3,1);
-  
 
+}
+
+/* ============= RESET =============  */ 
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,input,body{
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body{
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+h1,h2,h3{
+  color: var(--title-color);
+  font-weight: 700;
+}
+
+ul{
+  list-style: none;
+}
+
+p{
+  line-height: 1.7;
+}
+
+a{
+  text-decoration: none;
+}
+
+input, textarea, button{
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+button{
+  cursor: pointer;
+}
+
+img{
+  max-width: 100%;
 }
