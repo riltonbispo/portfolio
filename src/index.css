@@ -7,14 +7,14 @@
 :root{
   
   /* CORES */
-  --primary-color: hsl(165,60%,40%);
+  --primary-color:hsl(51, 97%, 50%);
   --title-color: hsl(0,0%,100%);
   --text-color: hsl(0,0%,92%);
   --bg-color: hsl(216,18%,16%);
   --bg-color-alt: hsl(213,10%,21%);
   --container-color: hsl(217,18%,14%);
   --border-color: hsl(210,2%,65%);
-  --firts-gradient: linear-gradient(
+  --first-gradient: linear-gradient(
     0deg, 
     var(--bg-color-alt) 0%, 
     var(--bg-color) 100%
