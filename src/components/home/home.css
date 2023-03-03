@@ -1,5 +1,9 @@
 .home {
   background-image: var(--first-gradient);
+  padding-bottom: 50px;
+}
+
+.home__wrapper{
   min-height: 100vh;
   display: grid;
   align-items: center;
@@ -83,9 +87,9 @@
 
 .home__img-wrapper{
   position: absolute;
-  top: -10%;
-  right: 40px;
-  width: 40%;
+  top: 10%;
+  right: 60px;
+  width: 30%;
   max-width: 680px;
 }
 
@@ -100,9 +104,9 @@
 
 .home__profile{
   position: absolute;
-  bottom: 0;
-  right: 30px;
-  height: 500px;
+  bottom: -10px;
+  right: 20px;
+  height: 400px;
   border-radius: 500px;
   object-fit: cover;
 }
@@ -122,12 +126,12 @@
 }
 
 .home__data-one{
-  bottom: 15%;
+  bottom: 5%;
   left: -30%;
 }
 
 .home__data-two{
-  bottom: 5%;
+  bottom: -15%;
   right: -20%;
 }
 
@@ -161,7 +165,7 @@
 .shape__1{
   width: 226px;
   height: 226px;
-  top: -6%;
+  top: -15%;
   right: -10%;
 }
 
@@ -172,11 +176,11 @@
 }
 
 .shape__2{
-  bottom: 0%;
+  bottom: 10%;
   left: -25%;
 }
 
 .shape__3{
-  bottom: -15%;
-  right: -2%;
+  bottom: -10%;
+  right: -10%;
 }
