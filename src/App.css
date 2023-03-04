@@ -117,6 +117,11 @@ img{
   margin-inline: auto;
 }
 
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
 .text-cs{
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -186,6 +191,7 @@ img{
   font-size: var(--smaller-font-size);
   text-transform: uppercase;
   font-weight: 700;
+  margin-bottom: 60px;
 }
 
 .section__subtitle span{
@@ -198,6 +204,8 @@ img{
 
 .card{
   background-color: var(--container-color);
+  overflow: hidden;
+  text-align: left;
 }
 
 .card-one{
@@ -215,10 +223,18 @@ img{
 .link__icon{
   color: var(--primary-color);
   margin-left: 20px;
+  transition: all 0.3s var(--transition);
 }
 
 .link:hover .link__icon{
   margin-left: 15px;
+}
+
+.c__shape{
+  right: -24px;
+  bottom: -24px;
+  width: 141px;
+  height: 141px;
 }
 
 

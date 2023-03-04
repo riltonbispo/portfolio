@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
+import shapeTwo from "../../assets/shape-2.png"
 
-import "./services.css";
 import { services } from "../../Data";
 
 // Import Swiper React components
@@ -13,6 +13,9 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper";
+
+import "./services.css";
+
 
 const Services = () => {
   return (
@@ -55,6 +58,8 @@ const Services = () => {
                 See Pricing
                 <FaArrowRight className="link__icon"></FaArrowRight>
               </a>
+
+              <img src={shapeTwo} alt="" className="shape c__shape" />
             </SwiperSlide>
           );
         })}
