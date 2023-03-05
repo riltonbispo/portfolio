@@ -48,7 +48,7 @@ const Services = () => {
       >
         {services.map(({ name, title, description }, index) => {
           return (
-            <SwiperSlide className="services__item card card-one">
+            <SwiperSlide className="services__item card card-one" key={index} >
               <span className="services__subtitle text-cs">{name}</span>
 
               <h3 className="services__title">{title}</h3>
