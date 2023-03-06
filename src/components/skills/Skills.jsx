@@ -6,8 +6,8 @@ const Skills = () => {
   return (
     <section className="skills section" id="skills">
       <h2 className="section__title text-cs ">Meus Conhecimentos</h2>
-      <p className="section__subtitle subtitle-skills">
-        Linguagens e Ferramentas
+      <p className="section__subtitle">
+        <span>Linguagens / Ferramentas</span>
       </p>
 
       <div className="skills__container container grid">
