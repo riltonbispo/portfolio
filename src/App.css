@@ -77,6 +77,10 @@ body{
   background-color: var(--bg-color);
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 h1,h2,h3{
   color: var(--title-color);
   font-weight: 700;
