@@ -8,32 +8,45 @@ import { animateScroll } from "react-scroll";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [scrollNav, setScrollNav] = useState(false)
+  const [scrollNav, setScrollNav] = useState(false);
+  const [theme, setTheme] = useState("light-theme");
 
   const scrollTop = () => {
-    animateScroll.scrollToTop()
-  }
+    animateScroll.scrollToTop();
+  };
 
   const changeNav = () => {
-    if (window.scrollY >= 80){
-      setScrollNav(true)
-    }else {
-      setScrollNav(false)
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  const toggleTheme = () => {
+    if (theme === 'light-theme') {
+      setTheme ('dark-theme');
+    } else {
+      setTheme('light-theme');
     }
   }
 
-  useEffect(() =>{
-    window.addEventListener('scroll', changeNav)
-  }, [])
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
 
   useEffect(() => {
     document.body.classList.toggle("no-scroll", showMenu);
   }, [showMenu]);
 
+  useEffect(() => {
+    document.documentElement.className= theme;
+  }, [theme]);
+
   return (
-    <header className={`${scrollNav ? 'scroll-header' : ''} header`}>
+    <header className={`${scrollNav ? "scroll-header" : ""} header`}>
       <nav className="nav">
-        <Link to='/' onClick={scrollTop} className="nav__logo text-cs">
+        <Link to="/" onClick={scrollTop} className="nav__logo text-cs">
           Rilton
         </Link>
 
@@ -74,8 +87,8 @@ const Header = () => {
         </div>
 
         <div className="nav__btns">
-          <div className="theme__toggler">
-            <BsSun />
+          <div className="theme__toggler" onClick={toggleTheme}>
+            {theme === 'light-theme' ? <BsMoon/> : <BsSun />}
           </div>
 
           <div

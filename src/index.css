@@ -7,7 +7,7 @@
 :root{
   
   /* CORES */
-  --primary-color:hsl(51, 97%, 50%);
+  --primary-color:	hsl(42, 100%, 60%);
   --title-color: hsl(0,0%,100%);
   --text-color: hsl(0,0%,92%);
   --bg-color: hsl(216,18%,16%);
@@ -57,6 +57,23 @@
 
   --transition: cubic-bezier(0.3,0,0.3,1);
 
+}
+
+/* ============= TEMA CLARO =============  */ 
+
+.light-theme {
+  --primary-color:hsl(199, 100%, 41%);
+  --title-color: #000;
+  --text-color: #262626;
+  --bg-color: #f0ebe3;
+  --bg-color-alt: #fff;
+  --container-color: #fff;
+  --border-color: #000;
+
+
+  /* SOMBRAS */
+
+  --shadow: 5px 5px rgb(0 0 0 / 20%);
 }
 
 /* ============= RESET =============  */ 
