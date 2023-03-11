@@ -6,6 +6,21 @@
   z-index: 100;
 }
 
+.scroll-header {
+  position: fixed;
+  background-color: var(--bg-color-alt);
+  animation: header_animate 0.8s var(--transition) 0s forwards;
+}
+
+@keyframes header_animate {
+  0% {
+    transform:  translateY(-100px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -15,6 +30,7 @@
   color: var(--title-color);
   font-size: var(--h4-font-size);
   font-weight: 700;
+  cursor: pointer;
 }
 
 .nav__menu {
@@ -51,9 +67,11 @@
   color: var(--title-color);
   font-size: var(--h5-font-size);
   font-weight: 700;
+  cursor: pointer;
   transition: all 0.3s var(--transition);
 }
 
+.active,
 .nav__link:hover {
   color: var(--primary-color);
 }
