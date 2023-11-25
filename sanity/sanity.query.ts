@@ -1,5 +1,5 @@
-import { groq } from "next-sanity";
-import client from "./sanity.client";
+import { groq } from 'next-sanity'
+import client from './sanity.client'
 
 export async function getProfile() {
   return client.fetch(
@@ -15,8 +15,8 @@ export async function getProfile() {
       "resumeURL": resumeURL.asset->url,
       socialLinks,
       skills
-    }`
-  );
+    }`,
+  )
 }
 
 export async function getJob() {
@@ -30,8 +30,8 @@ export async function getJob() {
       description,
       startDate,
       endDate,
-    }`
-  );
+    }`,
+  )
 }
 
 export async function getProjects() {
@@ -42,8 +42,8 @@ export async function getProjects() {
       "slug": slug.current,
       tagline,
       "logo": logo.asset->url,
-    }`
-  );
+    }`,
+  )
 }
 
 export async function getSingleProject(slug: string) {
@@ -56,6 +56,6 @@ export async function getSingleProject(slug: string) {
       tagline,
       description
     }`,
-    { slug }
-  );
+    { slug },
+  )
 }

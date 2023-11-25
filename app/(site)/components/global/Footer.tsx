@@ -12,10 +12,11 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer noopener"
           >
-            Desenvolvido por <span className="text-green-400">Rilton Bispo</span>
+            Desenvolvido por{' '}
+            <span className="text-green-400">Rilton Bispo</span>
           </a>
         </small>
       </div>
     </footer>
-  );
+  )
 }

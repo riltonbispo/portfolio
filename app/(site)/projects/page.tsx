@@ -1,10 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
-import { getProjects } from "@/sanity/sanity.query";
-import type { ProjectType } from "@/types";
+import Image from 'next/image'
+import Link from 'next/link'
+import { getProjects } from '@/sanity/sanity.query'
+import type { ProjectType } from '@/types'
 
 export default async function Project() {
-  const projects: ProjectType[] = await getProjects();
+  const projects: ProjectType[] = await getProjects()
 
   return (
     <main className="max-w-7xl mx-auto md:px-16 px-6">
@@ -43,5 +43,5 @@ export default async function Project() {
         ))}
       </section>
     </main>
-  );
+  )
 }

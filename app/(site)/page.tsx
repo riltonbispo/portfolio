@@ -1,10 +1,10 @@
-import { getProfile } from "@/sanity/sanity.query";
-import type { ProfileType } from "@/types";
-import HeroSvg from "@/app/(site)/icons/HeroSvg";
-import Job from "@/app/(site)/components/Job";
+import { getProfile } from '@/sanity/sanity.query'
+import type { ProfileType } from '@/types'
+import HeroSvg from '@/app/(site)/icons/HeroSvg'
+import Job from '@/app/(site)/components/Job'
 
 export default async function Home() {
-  const profile: ProfileType[] = await getProfile();
+  const profile: ProfileType[] = await getProfile()
 
   return (
     <main className="max-w-7xl mx-auto lg:px-16 px-6">
@@ -40,5 +40,5 @@ export default async function Home() {
       </section>
       <Job />
     </main>
-  );
+  )
 }

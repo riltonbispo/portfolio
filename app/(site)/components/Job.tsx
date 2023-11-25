@@ -1,10 +1,9 @@
-
-import Image from "next/image";
-import { getJob } from "@/sanity/sanity.query";
-import type { JobType } from "@/types";
+import Image from 'next/image'
+import { getJob } from '@/sanity/sanity.query'
+import type { JobType } from '@/types'
 
 export default async function Job() {
-  const job: JobType[] = await getJob();
+  const job: JobType[] = await getJob()
 
   return (
     <section className="mt-32">
@@ -42,5 +41,5 @@ export default async function Job() {
         ))}
       </div>
     </section>
-  );
+  )
 }

@@ -27,5 +27,5 @@ export default function HeroSvg() {
         </clipPath>
       </defs>
     </svg>
-  );
+  )
 }

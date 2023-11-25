@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import Logo from "../../icons/logo.png";
+import Image from 'next/image'
+import Link from 'next/link'
+import Logo from '../../icons/logo.png'
 
 export default function Navbar() {
   return (
@@ -31,5 +31,5 @@ export default function Navbar() {
         </nav>
       </div>
     </header>
-  );
+  )
 }

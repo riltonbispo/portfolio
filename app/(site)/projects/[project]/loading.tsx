@@ -11,5 +11,5 @@ export default function Loading() {
         <span className="w-full h-5 bg-[#1d1d20] rounded-sm animate-pulse"></span>
       </div>
     </div>
-  );
+  )
 }
