@@ -24,11 +24,6 @@ const educational = {
       type: 'image',
     },
     {
-      name: 'url',
-      title: 'Certificado',
-      type: 'url',
-    },
-    {
       name: 'description',
       title: 'Descrição do Curso',
       type: 'text',

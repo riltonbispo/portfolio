@@ -1,7 +1,7 @@
 import { getProfile } from '@/sanity/sanity.query'
 import type { ProfileType } from '@/types'
 import HeroSvg from '@/app/(site)/icons/HeroSvg'
-import Job from '@/app/(site)/components/Job'
+import Carreer from '@/app/(site)/components/Career'
 
 export default async function Home() {
   const profile: ProfileType[] = await getProfile()
@@ -38,7 +38,7 @@ export default async function Home() {
           ))}
         <HeroSvg />
       </section>
-      <Job />
+      <Carreer />
     </main>
   )
 }

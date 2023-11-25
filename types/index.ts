@@ -29,6 +29,17 @@ export type JobType = {
   skills: string[]
 }
 
+export type EducationalType = {
+  _id: string
+  name: string
+  schoolTitle: string
+  logo: string
+  description: string
+  startDate: Date
+  endDate: Date
+  skills: string[]
+}
+
 export type ProjectType = {
   _id: string
   name: string

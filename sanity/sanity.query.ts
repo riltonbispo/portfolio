@@ -35,6 +35,21 @@ export async function getJob() {
   )
 }
 
+export async function getEducational() {
+  return client.fetch(
+    groq`*[_type == "educational"]{
+      _id,
+      name,
+      schoolTitle,
+      "logo": logo.asset->url,
+      description,
+      skills,
+      startDate,
+      endDate,
+    }`,
+  )
+}
+
 export async function getProjects() {
   return client.fetch(
     groq`*[_type == "project"]{
