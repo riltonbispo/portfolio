@@ -28,6 +28,7 @@ export async function getJob() {
       "logo": logo.asset->url,
       url,
       description,
+      skills,
       startDate,
       endDate,
     }`,

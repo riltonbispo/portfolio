@@ -26,6 +26,7 @@ export type JobType = {
   description: string
   startDate: Date
   endDate: Date
+  skills: string[]
 }
 
 export type ProjectType = {

@@ -36,6 +36,13 @@ const job = {
       description: 'Write a brief description about this role',
     },
     {
+      name: 'skills',
+      title: 'Skills',
+      type: 'array',
+      description: 'Add a list of skills',
+      of: [{ type: 'string' }],
+    },
+    {
       name: 'startDate',
       title: 'Start Date',
       type: 'date',
