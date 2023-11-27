@@ -48,7 +48,7 @@ export default async function Home() {
                 <p className="text-base text-zinc-400 leading-relaxed">
                   {data.shortBio}
                 </p>
-                <ul className="flex flex-wrap items-center gap-3 mt-8">
+                <ul className="flex flex-wrap items-center gap-3 my-8">
                   {data.skills.map((skill, id) => (
                     <li
                       key={id}
