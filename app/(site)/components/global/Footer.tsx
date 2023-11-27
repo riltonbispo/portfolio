@@ -13,7 +13,7 @@ export default function Footer() {
             rel="noreferrer noopener"
           >
             Desenvolvido por{' '}
-            <span className="text-green-400">Rilton Bispo</span>
+            <span className="text-yellow-500">Rilton Bispo</span>
           </a>
         </small>
       </div>

@@ -72,7 +72,7 @@ export default async function Home() {
 
                   <a
                     href={`${data.resumeURL}?dl=${data.fullName}_resume`}
-                    className="flex items-center justify-center gap-x-2 bg-[#242477] border border-transparent hover:border-zinc-700 rounded-md duration-200 py-2 text-center cursor-cell font-medium"
+                    className="flex items-center justify-center gap-x-2 bg-yellow-500 text-zinc-950 border border-transparent hover:border-zinc-700 rounded-md duration-200 py-2 text-center cursor-cell font-medium"
                   >
                     <BiFile className="text-base" /> Download CV
                   </a>
