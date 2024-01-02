@@ -63,7 +63,7 @@ export default async function Home() {
                 <div>
                   <Image
                     className="rounded-2xl mb-4 object-cover max-h-96 min-h-96 bg-top bg-[#1d1d20]"
-                    src={data.profileImage.image}
+                    src="https://avatars.githubusercontent.com/u/98268946?v=4"
                     width={400}
                     height={400}
                     quality={100}
