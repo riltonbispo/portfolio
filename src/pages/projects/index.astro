@@ -1,0 +1,51 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+type Project = {
+  slug: string;
+  logo: string;
+  name: string;
+  resume: string;
+};
+const projects: Project[] = [];
+---
+
+<Layout title="Rilton Bispo - Projetos">
+  <main class="max-w-7xl mx-auto md:px-16 px-6">
+    <section class="max-w-2xl mb-16">
+      <h1
+        class="text-3xl font-bold tracking-tight sm:text-5xl mb-6 lg:leading-[3.7rem] leading-tight"
+      >
+        Projetos pessoais
+      </h1>
+      <p class="text-base text-zinc-400 leading-relaxed">
+        Eu trabalhei em alguns projetos pessoais ao longo dos anos, mas estes
+        são os que mais me orgulho. Eles são de código aberto, então se algo
+        chamar sua atenção, confira o código e contribua se tiver ideias para
+        melhorias.
+      </p>
+    </section>
+    <section class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mb-12">
+      {
+        projects.map((project) => (
+          <a
+            href={`/projects/${project.slug}`}
+            class="flex items-center gap-x-4 bg-[#1d1d20] border border-transparent hover:border-zinc-700 p-4 rounded-lg ease-in-out"
+          >
+            <img
+              src={project.logo}
+              width={60}
+              height={60}
+              alt={project.name}
+              class="bg-zinc-800 rounded-md p-2"
+            />
+            <div>
+              <h2 class="font-semibold mb-1">{project.name}</h2>
+              <div class="text-sm text-zinc-400">{project.resume}</div>
+            </div>
+          </a>
+        ))
+      }
+    </section>
+  </main>
+</Layout>

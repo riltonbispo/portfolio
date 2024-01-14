@@ -1,0 +1,81 @@
+---
+import Career from "../components/Career.astro";
+import Layout from "../layouts/Layout.astro";
+import { rilton } from "../data/profile";
+---
+
+<Layout title="Rilton Bispo">
+  <main class="max-w-7xl mx-auto lg:px-16 px-6">
+    <section
+      class="flex xl:flex-row flex-col xl:items-center items-start xl:justify-center justify-between gap-x-12 lg:mt-32 mt-20 mb-16"
+    >
+      <div class="lg:max-w-2xl max-w-2xl">
+        <h1
+          class="text-3xl font-bold tracking-tight sm:text-5xl lg:leading-[3.7rem] leading-tight lg:min-w-[700px] min-w-full"
+        >
+          {rilton.name}
+        </h1>
+        <h2 class="font-semibold text-3xl text-zinc-600">
+          {rilton.subtitle}
+        </h2>
+        <ul class="flex items-center gap-x-6 my-5">
+          {
+            rilton.links.map((item) => (
+              <li>
+                <a
+                  target="_blank"
+                  href={item.link}
+                  rel="noreferer noopener"
+                  class="flex items-center gap-x-3 mb-5 hover:text-purple-400 duration-300"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+          <li>
+            <a
+              href=`mailto:${rilton.email}`
+              class="flex items-center gap-x-3 mb-5 hover:text-purple-400 duration-300"
+            >
+              {rilton.email}
+            </a>
+          </li>
+        </ul>
+        <p class="text-base text-zinc-400 leading-relaxed">
+          {rilton.description}
+        </p>
+        <ul class="flex flex-wrap items-center gap-3 my-8">
+          {
+            rilton.skills.map((skill) => (
+              <li class="bg-[#1d1d20] border border-transparent hover:border-zinc-700 rounded-md px-2 py-1">
+                {skill}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div
+        class="flex flex-col lg:justify-self-center justify-self-start gap-y-8 lg:order-1 order-none mb-12"
+      >
+        <div>
+          <img
+            class="rounded-2xl mb-4 object-cover max-h-96 bg-top bg-[#1d1d20]"
+            src="https://avatars.githubusercontent.com/u/98268946?v=4"
+            width={400}
+            height={400}
+            alt="Rilton Bispo"
+          />
+
+          <a
+            href={`https://github.com/riltonbispo`}
+            class="flex items-center justify-center gap-x-2 bg-yellow-500 text-zinc-950 border border-transparent hover:border-zinc-700 rounded-md duration-200 py-2 text-center cursor-cell font-medium"
+          >
+            Download CV
+          </a>
+        </div>
+      </div>
+    </section>
+    <Career />
+  </main>
+</Layout>
