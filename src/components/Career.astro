@@ -1,6 +1,7 @@
 ---
 import { jobs, academic } from "../data/career";
 import { Image } from "astro:assets";
+import { Badge } from "@/components/ui/badge";
 ---
 
 <section class="mt-32">
@@ -31,8 +32,8 @@ import { Image } from "astro:assets";
             <p class="text-base text-zinc-400 my-4">{data.description}</p>
             <ul class="flex flex-wrap items-center gap-3 mt-8">
               {data.skills.map((skill) => (
-                <li class="bg-[#1d1d20] border border-transparent hover:border-zinc-700 rounded-md px-2 py-1">
-                  {skill}
+                <li>
+                  <Badge variant="outline">{skill}</Badge>
                 </li>
               ))}
             </ul>
@@ -69,8 +70,8 @@ import { Image } from "astro:assets";
             <p class="text-base text-zinc-400 my-4">{data.description}</p>
             <ul class="flex flex-wrap items-center gap-3 mt-8">
               {data.skills.map((skill) => (
-                <li class="bg-[#1d1d20] border border-transparent hover:border-zinc-700 rounded-md px-2 py-1">
-                  {skill}
+                <li>
+                  <Badge variant="outline">{skill}</Badge>
                 </li>
               ))}
             </ul>

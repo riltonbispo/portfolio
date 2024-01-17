@@ -2,6 +2,9 @@
 import Career from "../components/Career.astro";
 import Layout from "../layouts/Layout.astro";
 import { rilton } from "../data/profile";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Download } from "lucide-react";
 ---
 
 <Layout title="Rilton Bispo">
@@ -22,34 +25,30 @@ import { rilton } from "../data/profile";
           {
             rilton.links.map((item) => (
               <li>
-                <a
-                  target="_blank"
-                  href={item.link}
-                  rel="noreferer noopener"
-                  class="flex items-center gap-x-3 mb-5 hover:text-purple-400 duration-300"
-                >
-                  {item.label}
-                </a>
+                <Button variant="link" className="p-0">
+                  <a target="_blank" href={item.link} rel="noreferer noopener">
+                    {item.label}
+                  </a>
+                </Button>
               </li>
             ))
           }
           <li>
-            <a
-              href=`mailto:${rilton.email}`
-              class="flex items-center gap-x-3 mb-5 hover:text-purple-400 duration-300"
-            >
-              {rilton.email}
-            </a>
+            <Button variant="link" className="p-0">
+              <a href=`mailto:${rilton.email}`>
+                {rilton.email}
+              </a>
+            </Button>
           </li>
         </ul>
         <p class="text-base text-zinc-400 leading-relaxed">
           {rilton.description}
         </p>
-        <ul class="flex flex-wrap items-center gap-3 my-8">
+        <ul class="flex flex-wrap items-center gap-1 my-8">
           {
             rilton.skills.map((skill) => (
-              <li class="bg-[#1d1d20] border border-transparent hover:border-zinc-700 rounded-md px-2 py-1">
-                {skill}
+              <li>
+                <Badge variant="outline">{skill}</Badge>
               </li>
             ))
           }
@@ -67,12 +66,9 @@ import { rilton } from "../data/profile";
             alt="Rilton Bispo"
           />
 
-          <a
-            href={`https://github.com/riltonbispo`}
-            class="flex items-center justify-center gap-x-2 bg-yellow-500 text-zinc-950 border border-transparent hover:border-zinc-700 rounded-md duration-200 py-2 text-center cursor-cell font-medium"
-          >
-            Download CV
-          </a>
+          <Button className="w-full">
+            <Download className="mr-2 h-4 w-4" /> Download CV
+          </Button>
         </div>
       </div>
     </section>
