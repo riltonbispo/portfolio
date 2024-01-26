@@ -4,80 +4,84 @@ import { Image } from "astro:assets";
 import { Badge } from "@/components/ui/badge";
 ---
 
-<section class="mt-32">
-  <div class="my-16">
-    <h2 class="font-semibold text-4xl mb-4">Experiências Profissionais</h2>
+<section class="mt-16 xl:flex justify-between gap-10">
+  <div>
+    <div class="my-16">
+      <h2 class="font-semibold text-2xl mb-4">Experiências Profissionais</h2>
+    </div>
+  
+    <div class="flex flex-col gap-y-12">
+      {
+        jobs.map((data) => (
+          <div class="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl relative before:absolute before:bottom-0 before:top-[4.5rem] before:left-7 before:w-[1px] before:h-[calc(100%-50px)] before:bg-zinc-800">
+            <div class="min-h-[60px] min-w-[60px] rounded-md overflow-clip relative">
+              <Image
+                src={data.logo}
+                class="object-cover"
+                alt={`${data.name} logo`}
+                width="60"
+                height="60"
+              />
+            </div>
+            <div class="flex flex-col items-start">
+              <h3 class="text-xl font-bold">{data.name}</h3>
+              <p>{data.title}</p>
+              <small class="text-sm text-zinc-500 mt-2 tracking-widest uppercase">
+                {data.startDate} - {data.endDate}
+              </small>
+  
+              <p class="text-base text-zinc-400 my-4">{data.description}</p>
+              <ul class="flex flex-wrap items-center gap-3 mt-8">
+                {data.skills.map((skill) => (
+                  <li>
+                    <Badge variant="outline">{skill}</Badge>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))
+      }
+    </div>
   </div>
 
-  <div class="flex flex-col gap-y-12">
-    {
-      jobs.map((data) => (
-        <div class="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl relative before:absolute before:bottom-0 before:top-[4.5rem] before:left-7 before:w-[1px] before:h-[calc(100%-50px)] before:bg-zinc-800">
-          <div class="min-h-[60px] min-w-[60px] rounded-md overflow-clip relative">
-            <Image
-              src={data.logo}
-              class="object-cover"
-              alt={`${data.name} logo`}
-              width="60"
-              height="60"
-            />
+  <div>
+    <div class="my-16">
+      <h2 class="font-semibold text-2xl mb-4">Experiência Acadêmicas</h2>
+    </div>
+  
+    <div class="flex flex-col gap-y-12">
+      {
+        academic.map((data) => (
+          <div class="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl relative before:absolute before:bottom-0 before:top-[4.5rem] before:left-7 before:w-[1px] before:h-[calc(100%-50px)] before:bg-zinc-800">
+            <div class="min-h-[60px] min-w-[60px] rounded-md overflow-clip relative">
+              <Image
+                src={data.logo}
+                class="object-cover"
+                alt={`${data.name} logo`}
+                width="60"
+                height="60"
+              />
+            </div>
+            <div class="flex flex-col items-start">
+              <h3 class="text-xl font-bold">{data.name}</h3>
+              <p>{data.title}</p>
+              <small class="text-sm text-zinc-500 mt-2 tracking-widest uppercase">
+                {data.startDate} - {data.endDate}
+              </small>
+  
+              <p class="text-base text-zinc-400 my-4">{data.description}</p>
+              <ul class="flex flex-wrap items-center gap-3 mt-8">
+                {data.skills.map((skill) => (
+                  <li>
+                    <Badge variant="outline">{skill}</Badge>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div class="flex flex-col items-start">
-            <h3 class="text-xl font-bold">{data.name}</h3>
-            <p>{data.title}</p>
-            <small class="text-sm text-zinc-500 mt-2 tracking-widest uppercase">
-              {data.startDate} - {data.endDate}
-            </small>
-
-            <p class="text-base text-zinc-400 my-4">{data.description}</p>
-            <ul class="flex flex-wrap items-center gap-3 mt-8">
-              {data.skills.map((skill) => (
-                <li>
-                  <Badge variant="outline">{skill}</Badge>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      ))
-    }
-  </div>
-
-  <div class="my-16">
-    <h2 class="font-semibold text-4xl mb-4">Experiência Acadêmicas</h2>
-  </div>
-
-  <div class="flex flex-col gap-y-12">
-    {
-      academic.map((data) => (
-        <div class="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl relative before:absolute before:bottom-0 before:top-[4.5rem] before:left-7 before:w-[1px] before:h-[calc(100%-50px)] before:bg-zinc-800">
-          <div class="min-h-[60px] min-w-[60px] rounded-md overflow-clip relative">
-            <Image
-              src={data.logo}
-              class="object-cover"
-              alt={`${data.name} logo`}
-              width="60"
-              height="60"
-            />
-          </div>
-          <div class="flex flex-col items-start">
-            <h3 class="text-xl font-bold">{data.name}</h3>
-            <p>{data.title}</p>
-            <small class="text-sm text-zinc-500 mt-2 tracking-widest uppercase">
-              {data.startDate} - {data.endDate}
-            </small>
-
-            <p class="text-base text-zinc-400 my-4">{data.description}</p>
-            <ul class="flex flex-wrap items-center gap-3 mt-8">
-              {data.skills.map((skill) => (
-                <li>
-                  <Badge variant="outline">{skill}</Badge>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      ))
-    }
+        ))
+      }
+    </div>
   </div>
 </section>
