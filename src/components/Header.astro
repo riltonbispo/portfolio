@@ -1,31 +1,27 @@
 ---
-import { Home, LayoutTemplate } from "lucide-react";
+import { ModeToggle } from "./ModeToggle";
+import { BookOpenText, Home } from "lucide-react";
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="py-6 md:px-16 px-6 border-b border-zinc-800 z-30 md:mb-28 mb-20">
-  <div class="max-w-6xl mx-auto flex items-center justify-between">
+<header
+  class="max-w-7xl mx-auto px-6 justify-between flex sticky top-10 left-0 z-50"
+>
+  <nav class="flex py-1 px-2 gap-1 border rounded">
     <a
       href="/"
-      class=`${currentPath === '/' && 'bg-primary text-secondary px-2 py-1 rounded-md'}`
+      class=`flex gap-2 items-center py-1 px-2 rounded ${currentPath === '/' && 'bg-foreground text-secondary'}`
     >
-      <span class="flex gap-1 items-center">
-        <Home className="h-4 w-4" />
-        Rilton Bispo
-      </span>
+      <Home className="h-4 w-4" />
+      <span>Home</span>
     </a>
-    <nav>
-      <ul class="flex items-center gap-x-8">
-        <li>
-          <a
-            href="/projects"
-            class=`${currentPath === '/projects' && 'bg-primary text-secondary px-2 py-1 rounded-md' } flex gap-1 items-center`
-          >
-            <LayoutTemplate className="h-4 w-4" />
-            Projetos
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+    <a
+      href="/blog"
+      class=`flex gap-2 items-center py-1 px-2 rounded ${currentPath === '/blog' && 'bg-foreground text-secondary'}`
+    >
+      <BookOpenText className="h-4 w-4" />
+      <span>Blog</span>
+    </a>
+  </nav>
+  <ModeToggle client:idle />
 </header>
