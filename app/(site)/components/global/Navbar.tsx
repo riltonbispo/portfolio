@@ -11,7 +11,7 @@ export default function Navbar() {
             Rilton Bispo
           </span>
         </Link>
-        <nav>
+        {/* <nav>
           <ul className="flex items-center gap-x-8">
             <li>
               <Link
@@ -22,7 +22,7 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
       </div>
     </header>
   )

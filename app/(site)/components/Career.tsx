@@ -3,8 +3,18 @@ import { getEducational, getJob } from '@/sanity/sanity.query'
 import type { EducationalType, JobType } from '@/types'
 
 export default async function Career() {
-  const job: JobType[] = await getJob()
-  const educational: EducationalType[] = await getEducational()
+  let job: JobType[] = await getJob()
+  let educational: EducationalType[] = await getEducational()
+
+  job = job.sort(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (a, b) => (new Date(b.startDate) as any) - (new Date(a.startDate) as any),
+  )
+
+  educational = educational.sort(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (a, b) => (new Date(b.startDate) as any) - (new Date(a.startDate) as any),
+  )
 
   return (
     <section className="mt-32">
