@@ -8,12 +8,12 @@ export default async function Career() {
 
   job = job.sort(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (a, b) => (new Date(b.startDate) as any) - (new Date(a.startDate) as any),
+    (a, b) => (new Date(b.endDate) as any) - (new Date(a.endDate) as any),
   )
 
   educational = educational.sort(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (a, b) => (new Date(b.startDate) as any) - (new Date(a.startDate) as any),
+    (a, b) => (new Date(b.endDate) as any) - (new Date(a.endDate) as any),
   )
 
   return (
